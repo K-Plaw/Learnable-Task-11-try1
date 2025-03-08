@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="website icon" href="TECH-SOLUTIONS.png">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="allc">
+    <h2 class="hthe2">Job Application Form</h2>
+    <div class="form-container">
+        <form id="application-form">
+            <!-- <label for="job-title">Job Title:</label> -->
+            <input type="text" id="job-title" name="job-title" placeholder="Job Title" readonly>
+
+            <!-- <label for="company">Company:</label> -->
+            <input type="text" id="company" name="company" placeholder="Company Name" readonly>
+
+            <!-- <label for="name">Your Name:</label> -->
+            <input type="text" id="name" name="name" placeholder="Fullname" required>
+
+            <!-- <label for="email">Your Email:</label> -->
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+
+            <!-- <label for="cover-letter">Cover Letter:</label> -->
+            <textarea id="cover-letter" name="cover-letter" placeholder="Cover Letter" required></textarea>
+
+            <button type="submit" class="submit-button-a">Submit Application</button>
+        </form>
+    </div>
+    </div>
+
+    <script>
+        // Fetch query parameters from URL and fill in job details
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById("job-title").value = urlParams.get("job") || "";
+        document.getElementById("company").value = urlParams.get("company") || "";
+
+        // Handle form submission
+        document.getElementById("application-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            alert("Your application has been submitted successfully!");
+            window.location.href = "index.html"; // Redirect to homepage (or job listings)
+        });
+    </script>
+
+</body>
+</html>
