@@ -40,7 +40,7 @@ h2 {
   font-weight: 600;
   margin-top: 20px;
   margin-bottom: 20px; /* Add space below the header */
-  display: block; /* Ensure it's a block-level element */
+  display: block; 
   width: 100%; /* Take full width */
   text-align: center; /* Center the text */
 }
@@ -63,6 +63,81 @@ button {
 button:hover {
   transform: translateY(-2px);
 }
+
+
+
+/* Filter Styles */
+.search-filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.search-input {
+  padding: 12px 20px; 
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  width: 400px;
+  font-size: 1rem; 
+  color: #1f2937;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  height: 48px; 
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  border-color: #6a0dad;
+  outline: none;
+  box-shadow: 0 0 8px rgba(106, 13, 173, 0.3);
+}
+
+.location-dropdown {
+  padding: 12px 20px; /* Same padding as search bar */
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem; /* Same font size as search bar */
+  color: #1f2937;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  height: 48px; /* Explicit height to match search bar */
+  box-sizing: border-box; /* Ensure padding is included in height */
+}
+
+.location-dropdown:focus {
+  border-color: #6a0dad;
+  outline: none;
+  box-shadow: 0 0 8px rgba(106, 13, 173, 0.3);
+}
+
+/* Responsiveness*/
+@media (max-width: 768px) {
+  .search-filter-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .location-dropdown {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+
 
 /* Job Listings Styles */
 /* Job List Container */
